@@ -64,7 +64,7 @@ public class Day2 {
 		Scanner s = null;
 		try
 		{
-			s = new Scanner(new File("/home/entflammen/git/EntflammenAoC2020/src/day2.dat"), "ISO-8859-1");
+			s = new Scanner(new File("/home/entflammen/git/EntflammenAoC2020/src/drew.dat"), "ISO-8859-1");
 		}
 		catch(FileNotFoundException e) {}
 		
