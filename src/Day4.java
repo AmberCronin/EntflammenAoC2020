@@ -46,13 +46,28 @@ public class Day4 {
 		
 		for(HashMap<String, String> pass : passports)
 		{
-			if(passportValid(pass))
+			if(passportValid1(pass))
 				validcnt++;
 		}
 		System.out.println(validcnt);
 	}
 
-	private static boolean passportValid(HashMap<String, String> passport)
+	private static boolean passportValid1(HashMap<String, String> passport)
+	{
+		String[] keys = new String[] {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid" };
+		
+		for(String s : keys)
+		{
+			if (passport.get(s) == null)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	
+	private static boolean passportValid2(HashMap<String, String> passport)
 	{
 		String[] keys = new String[] {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid" };
 		
@@ -149,7 +164,7 @@ public class Day4 {
 		
 		for(HashMap<String, String> pass : passports)
 		{
-			if(passportValid(pass))
+			if(passportValid2(pass))
 				validcnt++;
 		}
 		System.out.println(validcnt);
