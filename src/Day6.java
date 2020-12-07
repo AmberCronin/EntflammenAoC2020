@@ -107,6 +107,8 @@ public class Day6 {
 				continue;
 			}
 			
+			
+			
 			for(Character c : line.toCharArray())
 			{
 				count[c+0]++;
